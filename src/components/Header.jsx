@@ -1,11 +1,10 @@
 import logo from '../static/images/favicon-32x32.png'
 
 
-
-function Home() {
-    return (
-        <section className='container flex justify-between m-auto p-5'>
-            <div>
+export const Header = () => {
+  return (
+    <section className='container flex justify-between m-auto p-5'>
+         <div >
                 <img src={logo} className="rounded-2xl" alt="" />
             </div>
             <div>
@@ -17,8 +16,6 @@ function Home() {
                     <span className='light'></span>
                 </div>
             </div>
-        </section>
-    )
+    </section>
+  )
 }
-
-export default Home;
