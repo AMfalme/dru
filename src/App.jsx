@@ -97,8 +97,8 @@ function App({sections}) {
         <Home />
         <About/>
         
-        <Career/>
-        <Skills />
+        {/* <Career/> */}
+        {/* <Skills /> */}
         <Contact/>
       </div>
   );
