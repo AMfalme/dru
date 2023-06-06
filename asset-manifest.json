@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/dru/static/css/main.94748f50.css",
-    "main.js": "/dru/static/js/main.a95b4c6c.js",
+    "main.css": "/dru/static/css/main.f4ffda1f.css",
+    "main.js": "/dru/static/js/main.2f0b4113.js",
     "static/js/787.8a41f71d.chunk.js": "/dru/static/js/787.8a41f71d.chunk.js",
     "static/media/okamaster.png": "/dru/static/media/okamaster.eeeda0e045bd9ab10c4d.png",
     "static/media/Andrew.jpeg": "/dru/static/media/Andrew.f483e920742f08100a06.jpeg",
     "index.html": "/dru/index.html",
-    "main.94748f50.css.map": "/dru/static/css/main.94748f50.css.map",
-    "main.a95b4c6c.js.map": "/dru/static/js/main.a95b4c6c.js.map",
+    "main.f4ffda1f.css.map": "/dru/static/css/main.f4ffda1f.css.map",
+    "main.2f0b4113.js.map": "/dru/static/js/main.2f0b4113.js.map",
     "787.8a41f71d.chunk.js.map": "/dru/static/js/787.8a41f71d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.94748f50.css",
-    "static/js/main.a95b4c6c.js"
+    "static/css/main.f4ffda1f.css",
+    "static/js/main.2f0b4113.js"
   ]
 }
