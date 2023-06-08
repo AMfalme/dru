@@ -2,19 +2,19 @@ import './SideNav.sass'
 
 
 
-export const SideNav = ({sections, activeSection, handleNavChange}) => {
+export const SideNav = ({sections, currentSection, handleNavChange}) => {
   return (
     <nav className="l-side-nav">
       <ul className="side-nav">
-        {sections.map(item => 
+        {sections.map(({index, section, nav })=> 
             <li 
-            className={activeSection === item ? "is-active": ""}
-            data-id={`section--${item}`}
+            className={currentSection.section === section ? "is-active": ""}
+            data-id={section}
             onClick={handleNavChange}
-            key={item}
+            key={index}
           >
             <span>
-              {item}
+              {nav}
             </span>
           </li>
           

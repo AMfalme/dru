@@ -6,6 +6,7 @@
   height: 100%
   align-items: center
   top: 0
+  z-index:100
 
   // placed on layout class due to firefox bug
   &::before
@@ -36,6 +37,7 @@
     padding: 0
     list-style-position: inside
     z-index: 10
+    list-style-type: circle
 
     & > li
       position: relative
@@ -93,11 +95,4 @@
       color: $highlight
       transition: color .4s ease-in-out
 
-      span
-        opacity: 1
-        visibility: visible
-        transition: opacity .4s ease-in-out
-
-      &::before
-        left: -33px
-        color: $white
+    

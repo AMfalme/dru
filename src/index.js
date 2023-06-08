@@ -4,12 +4,31 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 const sections = [
-  'home',
-  'about',
-  'experience',
-  'skills',
-  'contact'
-]
+  {
+    index: 0,
+    section: 'section--home',
+    nav: 'home'
+  },
+  {
+    index: 1,
+    section: 'section--about',
+    nav: 'about'
+  },
+  {
+    index: 2,
+    section: 'section--experience',
+    nav: 'experience'
+  },
+  {
+    index: 3,
+    section: 'section--skills',
+    nav: 'skills'
+  },
+  {
+    index: 4,
+    section: 'section--contact',
+    nav: 'contact'
+  }]
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

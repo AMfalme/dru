@@ -1,3 +1,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.btn {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    font-family: var(--default-font);
+    font-size: 16px;
+    color: #1d1c1e;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn_link .btn__inner{
+    
+    
+    padding: 15px 18px;
+    font-weight: 800;
+
+}
+
+.btn__inner{
+    display: inline-block;
+    padding: 18px 60px 18px 40px;
+    border-radius: 50px;
+}
+
+.btn_link .btn__inner:after, .btn_link .btn__inner:before{
+    background-color: #111827;
+    width: 60px;
+    height: 65%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.btn_link .btn__inner:before {
+    bottom: -1px;
+    left: -1px;
+}
+
+.btn_link .btn__inner:after {
+    top: -1px;
+    right: -1px;
+}
+.btn_link .btn__inner>span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn__inner:before {
+    bottom: 0;
+    left: 0;
+}
+
+.btn__inner:after, .btn__inner:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 50%;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: #111827;
+}
+
+.btn_link:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 12px;
+    background: url(static/images/icon__more.png) no-repeat;
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

@@ -13,94 +13,58 @@ import { Career } from "./components/Career";
 import { Contact } from "./components/Contact";
 import { About } from "./components/About";
 
-function App({sections}) {
-  const [currentSection, setCurrentSection] = useState('section--home');
-  
-  
+function App({ sections }) {
+  const [currentSection, setCurrentSection] = useState(sections[0]);
+
 
   useEffect(() => {
     let canScroll = true,
       scrollController = null;
-    onwheel = (event) => {
-
-      if (event.deltaY < 0 && canScroll)
-        {
-          console.log('scrolling upwards');
-          canScroll = false;
-
-          clearTimeout(scrollController);
-            scrollController = setTimeout(function(){
-              canScroll = true;
-            }, 1000);
-
-            let newCurrentActive = document.getElementsByClassName('section--active')[0];
-            console.log(newCurrentActive);
-            if (newCurrentActive.previousElementSibling == null) {
-            
-          newCurrentActive.classList.add('section--next');
-          setTimeout(() => {
-          newCurrentActive.classList.remove('section--active')
-          newCurrentActive.previousElementSibling.classList.add('section--active')},
-          300)
-          
-        }
-        }
-      else if (event.deltaY > 0 && canScroll)
-
-      // normal scroll downwards
-        {
-          canScroll = false;
-          clearTimeout(scrollController);
-          scrollController = setTimeout(function(){
-            canScroll = true;
-          }, 1000);
-
-          // set up new currentSection
-          // remove 'section--active' from the prev
-          // add 'section--active' to the newCurrentSection
-
-
-          let newCurrentActive = document.getElementsByClassName('section--active')[0];
-          console.log(newCurrentActive.previousSibling);
-          if (newCurrentActive.nextElementSibling == null) {
-            newCurrentActive = document.getElementById('section--home');
-          }
-          newCurrentActive.classList.add('section--next');
-          setTimeout(() => {
-          newCurrentActive.classList.remove('section--active')
-          newCurrentActive.nextElementSibling.classList.add('section--active')},
-          300)
-          
-          
-        
-        }
-  }
-  }, []);
- 
-  const handleSwitchComponent = (e) => {
-    const currentActiveSection = e.currentTarget.dataset.id;
-    setCurrentSection(e.currentTarget.dataset.id);
     const currentActive = document.getElementsByClassName('section--active')[0];
-    currentActive.classList.remove('section--active');
-    document.getElementsByClassName(currentActiveSection)[0].classList.remove('section--next');
-    document.getElementsByClassName(currentActiveSection)[0].classList.add('section--active');
+    currentActive.classList.add('section--next')
+    setTimeout(() => {
+      currentActive.classList.remove('section--active');
+      document.getElementsByClassName(currentSection.section)[0].classList.remove('section--next');
+      document.getElementsByClassName(currentSection.section)[0].classList.add('section--active')
+    },
+      100)
 
-    
+    onwheel = (event) => {
+      setTimeout(() => {
+
+        clearTimeout(scrollController);
+        if (event.deltaY > 0 && canScroll) {
+          currentSection.index < (sections.length - 1) ? setCurrentSection(sections[currentSection.index + 1]) : setCurrentSection(sections[0])
+        } else if (event.deltaY < 0 && canScroll) {
+          currentSection.index < 1 ? setCurrentSection(sections[sections.length - 1]) : setCurrentSection(sections[currentSection.index - 1])
+        }
+        canScroll = false;
+      }, 500);
+    }
+  }, [currentSection,sections]);
+
+  const handleSwitchComponent = (e) => {
+    const currentActiveSection = sections.find(eachItem =>
+      eachItem.section === e.currentTarget.dataset.id
+    )
+    setCurrentSection(currentActiveSection);
+
+
   }
 
 
-  
+
   return (
-      <div className="App w-full h-screen m-auto relative overflow-hidden bg-gray-900">
-        <Header />
-        <SideNav sections={sections} currentSection={currentSection} handleNavChange={handleSwitchComponent}/>
-        <Home />
-        <About/>
-        
-        {/* <Career/> */}
-        {/* <Skills /> */}
-        <Contact/>
-      </div>
+    <div className="App w-full h-screen m-auto relative overflow-hidden bg-gray-900">
+      <Header />
+      <SideNav sections={sections} currentSection={currentSection} handleNavChange={handleSwitchComponent} />
+      <Home />
+      <About />
+
+      <Career />
+      <Skills />
+      <Contact />
+    </div>
   );
 }
 

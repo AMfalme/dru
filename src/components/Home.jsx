@@ -70,7 +70,9 @@ function Home() {
                     />
                 </div>
             </div>
+        <div className='w-full fixed bottom-0 h-20 bg-black opacity-25'>
 
+        </div>
         </section>
     )
 }

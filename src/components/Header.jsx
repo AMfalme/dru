@@ -1,10 +1,10 @@
 import './_header.sass';
-import logo from '../static/images/favicon-32x32.png'
+import logo from '../static/images/favicon.png'
 
 
 export const Header = () => {
   return (
-    <section className='container flex justify-between m-auto p-5'>
+    <section className='relative container flex justify-between m-auto p-5'>
          <div >
                 <img src={logo} className="rounded-2xl" alt="" />
             </div>
