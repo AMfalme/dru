@@ -1,6 +1,7 @@
 import profile from '../static/images/okamaster.png'
-
+import arrow from '../static/images/arrow.png'
 import { SlowText } from './SlowText';
+import 'animate.css'
 function Home() {
     return (
         <section id='section--home' className='section--home container h-full m-auto absolute section opacity-0   section--active'>
@@ -71,7 +72,7 @@ function Home() {
                 </div>
             </div>
         <div className='w-full fixed bottom-0 h-20 bg-black opacity-25'>
-
+            <img src={arrow} className='m-auto flex w-12 animate__animated animate__infinite infinite animate__slower 3s animate__bounce' alt="" />
         </div>
         </section>
     )

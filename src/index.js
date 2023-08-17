@@ -16,16 +16,11 @@ const sections = [
   },
   {
     index: 2,
-    section: 'section--experience',
-    nav: 'experience'
+    section: 'section--portfolio',
+    nav: 'career'
   },
   {
     index: 3,
-    section: 'section--skills',
-    nav: 'skills'
-  },
-  {
-    index: 4,
     section: 'section--contact',
     nav: 'contact'
   }]

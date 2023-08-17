@@ -7,11 +7,12 @@ import "./index.css";
 import { Header } from "./components/Header";
 import { SideNav } from "./components/SideNav";
 import Home from "./components/Home";
-import { Story } from "./components/Story";
-import { Skills } from "./components/Skills";
 import { Career } from "./components/Career";
 import { Contact } from "./components/Contact";
 import { About } from "./components/About";
+import { Portfolio } from "./components/Portfolio";
+import { Certifications } from "./components/Certifications";
+import { Experience } from "./components/Experience";
 
 function App({ sections }) {
   const [currentSection, setCurrentSection] = useState(sections[0]);
@@ -39,7 +40,7 @@ function App({ sections }) {
           currentSection.index < 1 ? setCurrentSection(sections[sections.length - 1]) : setCurrentSection(sections[currentSection.index - 1])
         }
         canScroll = false;
-      }, 500);
+      }, 400);
     }
   }, [currentSection,sections]);
 
@@ -60,9 +61,9 @@ function App({ sections }) {
       <SideNav sections={sections} currentSection={currentSection} handleNavChange={handleSwitchComponent} />
       <Home />
       <About />
-
+      <Portfolio />
+   
       <Career />
-      <Skills />
       <Contact />
     </div>
   );

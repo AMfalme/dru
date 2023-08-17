@@ -13,7 +13,7 @@ const stats = [
 ]
 export const Story = () => {
   return (
-    <section id='section--about' className='container h-full m-auto absolute section--about about opacity-0' >
+    <section id='section--about' className='container h-full m-auto absolute section--about about ' >
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-5 m-auto w-11/12">
         <div className="relative isolate overflow-hidden bg-gray-900 p-24 pt-5 sm:py-24" style={{ "paddingTop": "35px" }}>
           {/* <img
