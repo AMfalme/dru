@@ -2,7 +2,6 @@ import React from 'react'
 const portfolioTabs = [
   'experience',
   'projects',
-  'skills',
   'certifications'
 ]
 const PortfolioTabs = ({ activeTab, handleSwitchTab }) => {

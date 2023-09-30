@@ -41,7 +41,7 @@ export const About = () => {
 
                             <div className="pt-12 pb-8">
                                 <button className="bg-lime-500 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full">
-                                    Read more ...
+                                    Curriculum vitae
                                 </button>
                             </div>
 

@@ -6,22 +6,22 @@ import { Skills } from "./Skills";
 import { Projects } from "./Projects"
 import { Certifications } from './Certifications';
 
-
 export const Portfolio = () => {
   const [currentTab, setCurrentTab] = useState(0);
+
   const handleSwitchTab = (e) => {
     console.log(e.currentTarget.dataset.id);
     setCurrentTab(e.currentTarget.dataset.id);
   }
+
+  
 
   const displaySection = () => {
     switch (currentTab){
       case 'experience':
         return <Experience currentActiveTab={currentTab}/>;
       case 'projects':
-        return <Projects />
-      case 'skills':
-        return <Skills />
+        return <Projects index={0}/>;
       case 'certifications':
         return <Certifications />
             
