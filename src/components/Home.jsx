@@ -4,14 +4,14 @@ import { SlowText } from './SlowText';
 import 'animate.css'
 function Home() {
     return (
-        <section id='section--home' className='section--home container h-full m-auto absolute section opacity-0   section--active'>
+        <section id='section--home' className='perspective--modalview section--home container h-full m-auto absolute section opacity-0   section--active'>
 
             <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-5 m-auto w-11/12">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <div className="mx-auto max-w-2xl pl-20 pt-12">
                         <div className="text-left">
                             <p className="
-                                m-6 text-lg leading-8 text-zinc-600 dark:text-zinc-100
+                                m-6 text-lg leading-8 text-zinc-600 dark:text-zinc-100 ml-0 mr-0
                             ">
                                 Hi, I'm <span className='text-amber-500'> Andrew Okamar. 👋🏾 </span>
                             </p>
@@ -60,6 +60,8 @@ function Home() {
                     <img
                         src={profile}
                         className="
+                        hidden
+                        md:flex
                         sm:w-[57rem]
                         md:-ml-4
                         lg:-ml-0
